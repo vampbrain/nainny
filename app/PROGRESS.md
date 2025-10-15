@@ -89,7 +89,7 @@ I recommend one of the following approaches (in descending order of reliability 
 
 Goal: teach the model to learn from human feedback and improve its rewriting style per audience.
 
-🧩 Subtasks
+ Subtasks
 
 - Collect Adaptation Pairs
   - Save original + adapted story + user rating (e.g. "too complex" or "too literal").
@@ -110,7 +110,7 @@ Goal: teach the model to learn from human feedback and improve its rewriting sty
 - Add Evaluation Dashboard
   - New endpoint `/feedback-dashboard` to visualize top-scoring vs low-scoring adaptations and recent feedback.
 
-✅ Outcome
+ Outcome
 - The model adapts culturally better over time as real users rate outputs.
 
 
@@ -118,7 +118,7 @@ Goal: teach the model to learn from human feedback and improve its rewriting sty
 
 Goal: make stories spoken, emotional, and immersive.
 
-🧩 Subtasks
+Subtasks
 
 - Add Text-to-Speech (TTS)
   - Use `gTTS` (or an offline alternative like `bark` if you add it later) to produce audio.
@@ -135,7 +135,7 @@ Goal: make stories spoken, emotional, and immersive.
 - Optional: Multilingual Output
   - Use MarianMT models (Helsinki-NLP) via `transformers` to translate adapted stories to Tamil/Hindi/etc.
 
-✅ Outcome
+ Outcome
 - A "listenable" storytelling engine with emotional prosody for demos and education.
 
 
@@ -143,7 +143,7 @@ Goal: make stories spoken, emotional, and immersive.
 
 Goal: visualize how the system "understands" culture and show explainability for adaptations.
 
-🧩 Subtasks
+Subtasks
 
 - Enhance ConceptNet Analyzer
   - Extract 5–10 core cultural/moral concepts from the original story and produce a prioritized list.
@@ -156,10 +156,9 @@ Goal: visualize how the system "understands" culture and show explainability for
 - Front-End Dashboard
   - Show side-by-side: Original story, Concept graph, Adapted story, Adaptation score, Audio playback button.
 
-✅ Outcome
+Outcome
 - A fully explainable storytelling system for demos and research — you can show "why" the AI made cultural changes.
 
 ---
 
-If you want, I can implement Phase 4 first (create `StoryAdaptationFeedback` model, JSONL writer, and a simple PEFT training wrapper). Or I can add the `/feedback-dashboard` and TTS endpoints first — tell me which subtask to pick and I’ll implement it next.
 
